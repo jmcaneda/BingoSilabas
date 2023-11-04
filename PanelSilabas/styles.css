@@ -1,0 +1,159 @@
+body {
+  font-family: 'Comic Sans MS', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #ffffff;
+  background-image: url('background-image.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.syllable-table {
+  width: 80%;  /* Ajusta según sea necesario */
+  border-collapse: separate;
+  border-spacing: 20px;
+  margin-bottom: 20px;
+}
+
+.syllable-table td {
+  border: 5px solid #d32f2f;
+  padding: 30px;  /* Aumenta el padding si es necesario */
+  text-align: center;
+  font-size: 3em;  /* Aumenta el tamaño de la fuente */
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+
+.button-container {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+button {
+  font-size: 20px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #d32f2f;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #9a0007;
+}
+
+.font-form {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.font-form select, .font-form input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #d32f2f;
+  border-radius: 4px;
+}
+
+.font-form input[type="submit"] {
+  background-color: #d32f2f;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.font-form input[type="submit"]:hover {
+  background-color: #9a0007;
+}
+
+@keyframes exaggeratedBounce {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25%, 75% { transform: translateY(-30px) rotate(15deg); }
+  50% { transform: translateY(-60px) rotate(-15deg); }
+}
+
+.highlight {
+  background-color: #ffeb3b;
+  transform: scale(1.2);
+  animation: exaggeratedBounce 1s ease-in-out;
+}
+
+/* Para pantallas pequeñas (móviles) */
+@media (max-width: 767px) {
+  .syllable-table {
+    font-size: 16px;
+  }
+
+  .syllable-table td {
+    padding: 10px;
+  }
+
+  .button-container button,
+  .font-form select,
+  .font-form input {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+}
+
+/* Para pantallas medianas (tablets) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .syllable-table {
+    font-size: 18px;
+  }
+
+  .syllable-table td {
+    padding: 15px;
+  }
+
+  .button-container button,
+  .font-form select,
+  .font-form input {
+    font-size: 16px;
+    padding: 7px 14px;
+  }
+}
+
+.syllable-table td.winner {
+  transform: scale(2);  /* Ajusta este valor según sea necesario */
+  font-size: 4em;  /* Ajusta este valor según sea necesario */
+}
+
+.credits {
+  width: 60%;  /* Ajusta según sea necesario para que coincida con el ancho de la tabla */
+  margin-top: 20px;  /* Añade margen en la parte superior para separar de la tabla y los botones */
+  text-align: center;  /* Centra el texto */
+  background-color: rgba(255, 255, 255, 0.8);  /* Fondo blanco con opacidad para que se vea el fondo */
+  padding: 10px;  /* Añade padding para espacio alrededor del texto */
+  border-radius: 10px;  /* Esquinas redondeadas como en la tabla y botones */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);  /* Sombra como en las celdas de la tabla */
+}
+
+.credits p {
+  margin: 0;  /* Elimina el margen de los párrafos para que estén juntos */
+  font-size: 16px;  /* Ajusta el tamaño de la fuente según sea necesario */
+  color: #d32f2f;  /* Color de texto rojo como los bordes de las celdas y botones */
+}
+
+/* Para pantallas pequeñas (móviles) */
+@media (max-width: 767px) {
+  .credits p {
+    font-size: 14px;  /* Ajusta el tamaño de la fuente para pantallas pequeñas */
+  }
+}
+
+/* Para pantallas medianas (tablets) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .credits p {
+    font-size: 16px;  /* Ajusta el tamaño de la fuente para pantallas medianas */
+  }
+}
