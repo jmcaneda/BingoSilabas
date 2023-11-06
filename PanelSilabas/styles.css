@@ -7,12 +7,14 @@ body {
   min-height: 100vh;
   background-color: #ffffff;
   background-image: url('background-image.png');
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-size: 100% auto; /* Ajusta el tamaño de la imagen al ancho del contenedor */
+  background-position: center center; /* Centra la imagen en el contenedor */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
 }
 
 .syllable-table {
   width: 80%;  /* Ajusta según sea necesario */
+  height:  90%;
   border-collapse: separate;
   border-spacing: 20px;
   margin-bottom: 20px;
@@ -124,7 +126,7 @@ button:hover {
 }
 
 .syllable-table td.winner {
-  transform: scale(2);  /* Ajusta este valor según sea necesario */
+  transform: scale(1.5);  /* Ajusta este valor según sea necesario */
   font-size: 4em;  /* Ajusta este valor según sea necesario */
 }
 
